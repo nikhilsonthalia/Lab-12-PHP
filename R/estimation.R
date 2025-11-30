@@ -26,7 +26,7 @@ estimate_intensity_function <- function(usage_data,
     ))
   } else if (method == "kernel") {
     hours <- as.numeric(format(station_data$timestamp, "%H")) + 
-      as.numeric(format(station_data$timestamp, "%M")) / 60\
+      as.numeric(format(station_data$timestamp, "%M")) / 60
     times <- seq(0, 24, length.out = n_bins)
     bandwidth <- 1.5
     intensities <- sapply(times, function(t) {
